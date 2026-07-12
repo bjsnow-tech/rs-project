@@ -13,6 +13,38 @@ A Python package that approximates the TradingView Pine Script Relative Strength
 - **Cap tier modes**: dedicated flags for small caps, mid caps, and majors — each saves results to its own folder
 - Optional matplotlib plot of the RS line with two moving average overlays
 
+## Demo
+
+RS line with EMA overlays (`rs-rating NVDA --plot`):
+
+![RS line demo](docs/images/rs_line_demo.png)
+
+Universe leaderboard (`rs-rating --majors`):
+
+![Leaderboard demo](docs/images/leaderboard_demo.png)
+
+EMA pullback screener — majors (`python ema_pullback.py --universe majors`):
+
+![EMA pullback majors demo](docs/images/ema_pullback_majors_demo.png)
+
+EMA pullback screener — midcap (`python ema_pullback.py --universe midcap`):
+
+![EMA pullback midcap demo](docs/images/ema_pullback_midcap_demo.png)
+
+`--save-insights` ticker list output — majors:
+
+![EMA pullback majors txt demo](docs/images/ema_pullback_majors_txt_demo.png)
+
+`--save-insights` ticker list output — midcap:
+
+![EMA pullback midcap txt demo](docs/images/ema_pullback_midcap_txt_demo.png)
+
+`--save-insights` markdown report output — majors:
+
+![EMA pullback majors markdown demo](docs/images/ema_pullback_majors_md_demo.png)
+
+*(Generated from real market data via Yahoo Finance, using this project's own RS scoring and EMA pullback tier-classification logic.)*
+
 ## Project layout
 
 ```text
