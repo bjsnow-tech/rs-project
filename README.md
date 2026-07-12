@@ -1,13 +1,13 @@
 # RS Project
 
-A Python package that approximates the TradingView Pine Script Relative Strength workflow — for a single stock or an entire Finviz Elite universe.
+A Python package that approximates the Relative Strength workflow — for a single stock or an entire Finviz Elite universe.
 
 ## Features
 
 - Downloads daily price data via Polygon
 - Computes the RS line as `stock / benchmark`
 - Computes a weighted 12-month RS score using 63, 126, 189, and 252 trading-day lookbacks
-- Maps the score to an approximate 1-99 RS rating using Pine Script replay-mode threshold bands
+- Maps the score to an approximate 1-99 RS rating using replay-mode threshold bands
 - **Universe mode**: fetch a ticker list from any Finviz Elite export URL, compute RS ratings in parallel, and print a ranked leaderboard
 - **Daily mode**: rank stocks by single-day return relative to a benchmark
 - **Cap tier modes**: dedicated flags for small caps, mid caps, and majors — each saves results to its own folder
@@ -218,8 +218,8 @@ Run `python ema_pullback.py --help` for the full option list.
 
 ## Notes
 
-This is an approximation of the Pine Script logic, not an exact clone of an official IBD RS Rating.
-The original Pine Script uses external seeded threshold data; this project uses replay-mode thresholds as fixed cutoffs.
+This is an approximation of the Relative Strength logic, not an exact clone of an official IBD RS Rating.
+The original approach uses external seeded threshold data; this project uses replay-mode thresholds as fixed cutoffs.
 
 ## License
 

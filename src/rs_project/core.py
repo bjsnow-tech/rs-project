@@ -15,7 +15,7 @@ BENCHMARK_MAP = {
     "^RUT":  "IWM",
 }
 
-# Approximate threshold environment from the Pine script's replay-mode defaults.
+# Approximate threshold environment from the replay-mode defaults.
 DEFAULT_THRESHOLDS: Dict[str, float] = {
     "first": 195.93,  # ~99
     "scnd": 117.11,   # ~90+
@@ -120,7 +120,7 @@ def download_prices(ticker: str, benchmark: str, period: str) -> pd.DataFrame:
 
 
 def safe_lookback_index(length: int, bars_back: int) -> int:
-    """Match Pine behavior when a symbol has limited history."""
+    """Match reference behavior when a symbol has limited history."""
     return min(bars_back, length - 1)
 
 
@@ -149,7 +149,7 @@ def attribute_percentile(
     range_dn: int,
     weight: float,
 ) -> int:
-    """Approximate percentile mapping function ported from the Pine script."""
+    """Approximate percentile mapping function."""
     adjusted = total_rs_score + (total_rs_score - smaller_perf) * weight
     if adjusted > taller_perf - 1:
         adjusted = taller_perf - 1
