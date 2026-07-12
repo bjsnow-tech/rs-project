@@ -2,8 +2,6 @@
 
 A Python package that approximates the Relative Strength workflow — for a single stock or an entire Finviz Elite universe.
 
-![GitHub repo screenshot](docs/images/github_repo_screenshot.png)
-
 ## Features
 
 - Downloads daily price data via Polygon
